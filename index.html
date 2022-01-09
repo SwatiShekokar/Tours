@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+
+        #active {
+            color: red;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        #active:hover {
+            color: whitesmoke;
+        }
+
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: flex;
+
+            width: 100%;
+
+            justify-content: space-between;
+
+            padding: 20px;
+            color: whitesmoke;
+
+        }
+
+        .link {
+            display: inline-block;
+            font-size: 25px;
+            cursor: pointer;
+            font-weight: lighter;
+        }
+
+
+        .link:hover {
+            color: rgb(221, 8, 132);
+        }
+
+        .logo {
+            font-size: 37px;
+            font-weight: bold;
+
+            color: deeppink;
+
+        }
+
+        .logo:hover {
+            color: whitesmoke;
+        }
+
+        #link1:hover {
+            color: whitesmoke;
+        }
+
+        .navbar a {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar li {
+            margin: 0 30px;
+        }
+
+
+
+        header {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(images/top.jpg);
+            background-position: bottom;
+            background-size: cover;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+        }
+
+        .header-content {
+            margin-bottom: 150px;
+            color: whitesmoke;
+            text-align: center;
+        }
+
+        .header-content h2 {
+            font-size: 9vmin;
+            font-weight: bold;
+
+        }
+
+        .line {
+            width: 390px;
+            height: 5px;
+            background-color: rgb(233, 37, 141);
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+
+        .header-content h1 {
+            font-size: 8vmin;
+            margin-top: 50px;
+            font-weight: bold;
+            margin-bottom: 30px;
+
+        }
+
+        .ctn {
+            padding: 8px 15px;
+            background: deeppink;
+            border-radius: 30px;
+            color: whitesmoke;
+            font-size: 25px;
+        }
+
+        .ctn:hover {
+            background: floralwhite;
+            color: red;
+        }
+
+
+
+        .icon {
+            border: 3.5px solid whitesmoke;
+            border-radius: 9px;
+            height: 44px;
+            width: 60px;
+            cursor: pointer;
+
+        }
+
+        #icon1 {
+            background-color: deeppink;
+            width: 48px;
+            height: 2px;
+            margin: 1.5px auto;
+            padding: 5px;
+            border-radius: 20px;
+
+
+        }
+
+        #icon2 {
+            background-color: deeppink;
+            width: 48px;
+            height: 2px;
+            margin: 1.5px auto;
+            padding: 5px;
+            border-radius: 20px;
+
+
+
+        }
+
+        #icon3 {
+            background-color: deeppink;
+            width: 48px;
+            height: 2px;
+            margin: 1.5px auto;
+            padding: 5px;
+            border-radius: 20px;
+
+
+
+        }
+
+        /*events*/
+        section {
+            width: 80%;
+            margin: 5% auto;
+
+        }
+
+        .title {
+            text-align: center;
+            font-size: 5.5vmin;
+            color: violet;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+
+        }
+
+        .row .col {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .events .row {
+            margin: 60px auto;
+
+
+
+
+
+        }
+
+        h3 {
+            font-size: 4.5vmin;
+            color: black;
+            margin: 20px auto;
+        }
+
+        p {
+            color: black;
+            padding: 0px 40px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .events .ctn {
+            margin-top: 30px;
+        }
+
+        img {
+            width: 600px;
+            height: 350px;
+            transition-duration: 2ms;
+
+
+        }
+
+        body,
+        html {
+            overflow-x: hidden;
+        }
+
+
+        .explore {
+            width: 100%;
+            height: 100vh;
+            background-image: url(images/thi.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .explore-content {
+            width: 53%;
+            padding: 50px;
+            color: whitesmoke;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .explore-content h1 {
+            font-size: 7vmin;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+
+        }
+
+        .explore-content .line {
+            margin-bottom: 3px;
+            width: 380px;
+        }
+
+        .explore-content p {
+            color: white;
+        }
+
+        .explore-content .ctn {
+            margin-top: 40px;
+
+        }
+
+        .content-col {
+            width: 73%;
+
+        }
+
+        .image-col {
+            width: 60%;
+        }
+
+
+        .tours .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            align-items: right;
+        }
+
+        .image-gallery img {
+            max-width: 253px;
+            margin: 10px;
+        }
+
+        .content-col h1 {
+            font-size: 7vmin;
+            color: rgb(224, 122, 245);
+            text-align: center;
+
+        }
+
+        .content-col line {
+            margin-top: -1px;
+
+        }
+
+        .content-col p {
+            padding: 0;
+            margin: 30px auto;
+        }
+
+        .content-col .ctn {
+            margin-left: -100px;
+            width: 240px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .footer {
+            width: 100%;
+            min-height: 100px;
+            padding: 20px 80px;
+            margin: 0;
+            background: #484872;
+            text-align: center;
+
+        }
+
+        .footer p {
+            color: white;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <h1 class="logo">ADVENTURE</h1>
+        <ul>
+            <li class="link"><a href="index.html"></a>Home</li>
+            <li class="link"><a href="https://www.tourism-of-india.com/blog/most-popular-treks-in-india/"></a>Tours</li>
+            <li class="link"><a href="#"></a>Explore</li>
+            <li class="link"><a href="#"></a>About</li>
+            <li class="link" id="active"><a href="#"></a>Contact</li>
+
+        </ul>
+        <div class="icon">
+            <div id="icon1"></div>
+            <div id="icon2"></div>
+            <div id="icon3"></div>
+
+        </div>
+
+    </nav>
+    <header>
+        <div class="header-content">
+
+            <h2>
+                Explore The Colorful World
+            </h2>
+            <div class="line">
+            </div>
+            <div class="line1">
+                <h1>A Wonderful GIFT</h1>
+                <a href="#" class="ctn">Learn More!</a>
+
+            </div>
+
+        </div>
+    </header>
+
+    <!--upcoming event-->
+    <section class="events">
+        <div class="title">
+            <h1>Next Events</h1>
+            <div class="line"></div>
+        </div>
+        <div class="row">
+            <div class="col" id="first">
+                <img src="./images/0.jpg" alt="">
+                <h3>Everest Camp trek</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas alias neque maiores labore asperiores
+                    molestiae error possimus soluta fugit enim.</p>
+                <a href="#" class="ctn">More Information!</a>
+
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="col" id="second">
+                <img src="./images/3.jpg" alt="">
+                <h3>Enjoying Holidays</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas alias neque maiores labore asperiores
+                    molestiae error possimus soluta fugit enim.</p>
+                <a href="#" class="ctn">More Information!</a>
+
+            </div>
+    </section>
+    <section class="explore">
+        <div class="explore-content">
+            <h1>Explore The World</h1>
+            <div class="line"></div><br><br>
+            <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione consequatur tempore delectus laboriosam
+                at
+                alias doloribus. Dolore expedita vero Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur enim quisquam mollitia ex incidunt nam voluptatem deleniti ducimus autem ut? Ipsa tempora
+                ducimus rerum, expedita nam harum sit cum architecto!lorem10
+            </P>
+            <a href="#" class="ctn">Learn More!</a>
+        </div>
+    </section>
+    <section class="tours">
+        <div class="row">
+            <div class="col content-col">
+                <h1 class="up">Upcoming Tours & Destination</h1>
+                <div class="line"></div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis quasi, dolores dolor quod, voluptate
+                    cupiditate voluptatum a optio deleniti magnam molestiae eaque quia, nulla consequuntur reprehenderit
+                    beatae in incidunt laudantium!</p>
+                <a href="#" class="ctn">Learn More!</a>
+            </div>
+            <div class="col image-col">
+                <div class="image-gallery">
+                    <img src="./images/1.jpg" alt="">
+                    <img src="./images/last3.jpg" alt="">
+                    <img src="./images/last1.jpg" alt="">
+                    <img src="./images/2.jpg" alt="">
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <section class="footer">
+        <p> ABC sixth Avenue, panvel-223344, Mumbai, Maharashtra | phone:1234500987 | Email: contact@examp</p>
+        <p>@copyright 2021 Outdoor Adventure </p>
+    </section>
+
+
+</body>
+
+</html>
